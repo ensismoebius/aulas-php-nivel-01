@@ -7,6 +7,10 @@ $nomeGerado = gerarNomeParaArquivo ();
 if (salvarArquivo ( $nomeGerado )) {
 	// salvar os dados da imagem no banco de dados
 	$cod = $_SESSION ["cod"];
+	
+	conectar ();
+	executarSQL ( "insert into Imagem (codUsuario, nome)values('$cod','$nomeGerado')" );
+	desconectar ();
 } else {
 	echo "Não foi possível salvar sua imagem!!";
 }
