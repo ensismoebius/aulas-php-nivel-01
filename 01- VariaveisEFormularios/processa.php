@@ -1,4 +1,41 @@
 <?php
+$lista = array(2,4,6,7);
+
+$lista[]=20;
+$lista[]=3;
+
+unset($lista[1]);
+
+
+$valorRemovido = array_pop($lista);
+
+
+
+
+
+
+/**
+ * Altera o parâmetro elevando-o ao quadrado
+ * @author Zé das Couve
+ * @example
+ * $valor = 10;
+ * elevaAoQuadrado($valor);
+ * $valor = 100;
+ * @param integer $valor
+ */
+function elevaAoQuadrado(&$valor) {
+	$valor = pow ( $valor, 2 );
+}
+function elevaAoQuadradoComRetorno($valor) {
+	return pow ( $valor, 2 );
+}
+
+$uga = 10;
+$uga = elevaAoQuadradoComRetorno ( $uga );
+echo $uga;
+
+elevaAoQuadrado ( $uga );
+echo $uga;
 function repete3Vezes($quantidade) {
 	// Usando o for
 	for($i = 0; $i < $quantidade; $i ++) {
