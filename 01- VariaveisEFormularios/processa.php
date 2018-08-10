@@ -1,26 +1,20 @@
 <?php
-$lista = array(2,4,6,7);
+$lista = array (2, 4, 6, 7);
 
-$lista[]=20;
-$lista[]=3;
+$lista [] = 3;
+$lista [] = 20;
 
-unset($lista[1]);
+unset ( $lista [1] );
 
-
-$valorRemovido = array_pop($lista);
-
-
-
-
-
+$valorRemovido = array_pop ( $lista );
 
 /**
  * Altera o parâmetro elevando-o ao quadrado
+ *
  * @author Zé das Couve
- * @example
- * $valor = 10;
- * elevaAoQuadrado($valor);
- * $valor = 100;
+ * @example $valor = 10;
+ *          elevaAoQuadrado($valor);
+ *          $valor = 100;
  * @param integer $valor
  */
 function elevaAoQuadrado(&$valor) {
