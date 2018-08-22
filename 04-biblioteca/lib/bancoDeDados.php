@@ -29,8 +29,6 @@ function executarSQL(string $sql) {
 	$conexao->beginTransaction ();
 	$resultado->execute ();
 	$conexao->commit ();
-	
-	
 }
 
 
