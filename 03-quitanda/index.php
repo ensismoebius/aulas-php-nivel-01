@@ -11,9 +11,3 @@
 	</form>
 </body>
 </html>
-
-
-
-
-<?php
-echo "Olá mundo";
