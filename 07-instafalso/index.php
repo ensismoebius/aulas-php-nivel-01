@@ -5,7 +5,7 @@ session_start ();
 
 if (formularioEnviado ()) {
 	if (conectar ()) {
-		executarSQL ( "select cod from Login where login='{$_POST["login"]}'
+		executarSQL ( "select cod from Usuario where login='{$_POST["login"]}'
 				and senha='{$_POST["senha"]}'" );
 
 		$arrResultado = recuperarResultados ();
@@ -17,13 +17,12 @@ if (formularioEnviado ()) {
 	}
 }
 
-desconectar();
+desconectar ();
 
 if (isset ( $_SESSION ["cod"] )) {
 	header ( "location: principal.php" );
 	return;
 }
-
 function formularioEnviado() {
 	return isset ( $_POST ["login"] ) && isset ( $_POST ["senha"] );
 }
@@ -36,8 +35,7 @@ function formularioEnviado() {
 </head>
 <body>
 	<form action="index.php" method="post">
-		<input type="text" name="login" /> 
-		<input type="password" name="senha" />
+		<input type="text" name="login" /> <input type="password" name="senha" />
 		<input type="submit" value="Enviar" />
 	</form>
 </body>
