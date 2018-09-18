@@ -1,5 +1,4 @@
 <?php 
-// Teste  de comentário
 require_once 'lib/bancoDeDados.php';
 if (! conectar ()) {
 	echo "Falha ao atualizar o banco de dados!";
