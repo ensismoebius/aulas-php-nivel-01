@@ -5,7 +5,7 @@ function conectar(): bool {
 	global $conexao;
 
 	// Data Source Name - nome da fonte de dados
-	$dsn = "mysql:host=127.0.0.1;dbname=instalfalso";
+	$dsn = "mysql:host=127.0.0.1;dbname=instafalso";
 
 	try {
 		// PHP Data Object - Objeto de Informações do PHP

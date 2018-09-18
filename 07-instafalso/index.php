@@ -5,8 +5,7 @@ session_start ();
 
 if (formularioEnviado ()) {
 	if (conectar ()) {
-		executarSQL ( "select cod from Usuario where login='{$_POST["login"]}'
-				and senha='{$_POST["senha"]}'" );
+		executarSQL ( "select cod from Usuario where login='{$_POST["login"]}' and senha='{$_POST["senha"]}'" );
 
 		$arrResultado = recuperarResultados ();
 
