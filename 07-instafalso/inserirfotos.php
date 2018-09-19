@@ -70,7 +70,7 @@ if (formularioEnviado ()) {
 
 	if ($resultado) {
 
-		$sql = "insert into Foto (nome, descricao, visibilidade) values	('$nomeDoArquivo','$descricao',$visibilidade)";
+		$sql = "insert into Foto (nome, descricao, visibilidade, cod_canal) values	('$nomeDoArquivo','$descricao',$visibilidade,'$codDono')";
 
 		executarSQL ( $sql );
 	} else {
