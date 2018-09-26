@@ -26,6 +26,7 @@ function formularioEnviado() {
 	return isset ( $_POST ["login"] ) && isset ( $_POST ["senha"] );
 }
 ?>
+<!-- teste git -->
 <!doctype html>
 <html lang="en">
 <head>
