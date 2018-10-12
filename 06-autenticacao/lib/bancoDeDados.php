@@ -1,6 +1,7 @@
 <?php
 $resultado = null;
 $conexao = null;
+
 function conectar(): bool {
 	global $conexao;
 
@@ -8,10 +9,14 @@ function conectar(): bool {
 	$dsn = "mysql:host=127.0.0.1;dbname=xodo";
 
 	try {
-		// PHP Data Object - Objeto de Informações do PHP
-		$conexao = new PDO ( $dsn, "teste", "1234" );
+		$conf = array (
+				PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+		);
+
+		$conexao = new PDO ( $dsn, "teste", "1234", $conf );
 		return true;
-	} catch ( Exception $e ) {
+	}
+	catch ( Exception $e ) {
 		return false;
 	}
 }
@@ -31,7 +36,7 @@ function executarSQL(string $sql) {
 	$conexao->commit ();
 }
 
-function recuperarResultados(){
+function recuperarResultados() {
 	global $resultado;
-	return $resultado->fetchAll();
+	return $resultado->fetchAll ();
 }
