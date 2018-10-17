@@ -55,7 +55,7 @@ class BancoDeDados {
 	 * @return bool
 	 */
 	public function abrirConexao(): bool {
-		$end = "mysql:host=127.0.0.1;dbname=coletivos";
+		$end = "mysql:host=127.0.0.1;dbname=instafalso";
 		try {
 			$conf = array (
 					PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
